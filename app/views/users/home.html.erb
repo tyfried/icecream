@@ -1,14 +1,21 @@
-<div class="center jumbotron">
-  <h1>Fried's Ice Cream Shop</h1>
-
-  <h2>
-    This is an ice cream demo app built in
-    <a href="http://www.railstutorial.org/">Ruby on Rails</a>.
-  </h2>
-
-  <% if logged_in? %>
-    <a href="#" class="btn btn-lg btn-primary">Create an order</a>
-  <% else %>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="order_form">
+        <%= render 'shared/order_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1>Tyler's Ice Cream Shop</h1>
+    <h2>
+      This is an ice cream demo app built in
+      <a href="http://www.railstutorial.org/">Ruby on Rails</a>.
+    </h2>
     <%= link_to("Sign up now!", signup_path, class: "btn btn-lg btn-primary") %>
-  <% end %>
-</div>
+  </div>
+<% end %>

@@ -7,4 +7,17 @@
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @user.orders.any? %>
+      <h3>Orders (<%= @user.orders.count %>)</h3>
+      <ul class="orders">
+        <%= render @orders %>
+      </ul>
+    <% else %>
+      <div class="no-orders">
+        <p>No orders yet.</p>
+        <p>Create one here.</p>
+      </div>
+    <% end %>
+  </div>
 </div>

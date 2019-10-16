@@ -1,0 +1,12 @@
+<%= form_for(@order) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.label :cone %>
+    <%= f.text_field :cone %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor %>
+    <%= f.text_field :flavor %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>

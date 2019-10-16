@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cone: MyString
+  flavor: MyString
+  user: one
+
+two:
+  cone: MyString
+  flavor: MyString
+  user: two
