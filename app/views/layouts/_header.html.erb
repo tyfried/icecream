@@ -1,24 +1,16 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <nav>
-    <div class="container">
-      <%= link_to "Tyler's", root_path, id: "logo", class:"navbar-brand" %>
-      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
-          <span class="navbar-toggler-icon"></span>
-      </button> -->
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home", root_path %></li>
-          <% if logged_in? %>
-            <li><%= link_to "Orders", current_user %></li>
-            <li><%= link_to "Log out", logout_path, method: :delete %></li>
-          <% else %>
-            <li><%= link_to "Log in", login_path %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div class="container">
+    <%= link_to "Tyler's", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home", root_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to "Orders", current_user %></li>
+          <li><%= link_to "Log out", logout_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Log in", login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
 </header>
